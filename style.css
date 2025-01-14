@@ -17,6 +17,10 @@ body {
   min-height: 100vh;
   background-color: #f8f9fa;
 }
+.header {
+  display: flex; /* Zorg ervoor dat flexbox actief is */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
 .logo {
   max-width: 200px; /* Zorg ervoor dat het logo niet te groot wordt */
   align-items: center;
