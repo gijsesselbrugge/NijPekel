@@ -17,16 +17,10 @@ body {
   min-height: 100vh;
   background-color: #f8f9fa;
 }
-.header {
-  display: flex;
-  justify-content: center; /* Horizontaal centreren */
-  align-items: center; /* Verticaal centreren */
-  height: 100vh; /* Zorgt ervoor dat de header de volledige hoogte van het scherm heeft */
-  background-color:#ffffff; /* Achtergrondkleur voor de header */
-}
 .logo {
   max-width: 200px; /* Zorg ervoor dat het logo niet te groot wordt */
   height: auto; /* Verhoudingen behouden */
+  align-items: center;
 }
 .landing-btn,
 .back-btn {
