@@ -1,50 +1,57 @@
-// Haal alle sliders en bijbehorende elementen op
-const sliders = document.querySelectorAll('.slider');
-const imagesAfter = document.querySelectorAll('.image-after');
-const sliderLines = document.querySelectorAll('.slider-line');
-const sliderButtons = document.querySelectorAll('.slider-button');
+document.addEventListener('DOMContentLoaded', () => {
+  // Haal alle sliders en de gerelateerde elementen op
+  const sliders = document.querySelectorAll('.slider');
 
-sliders.forEach((slider, index) => {
-  const imageAfter = imagesAfter[index];
-  const sliderLine = sliderLines[index];
-  const sliderButton = sliderButtons[index];
+  sliders.forEach(slider => {
+    const sliderContainer = slider.closest('.slider-container');
+    const imageAfter = sliderContainer.querySelector('.image-after');
+    const sliderLine = sliderContainer.querySelector('.slider-line');
+    const sliderButton = sliderContainer.querySelector('.slider-button');
 
-  // Update slider positie op input
-  slider.addEventListener('input', (e) => {
-    const sliderValue = e.target.value;
-    const percentage = `${sliderValue}%`;
+    // Controleer of de elementen correct zijn gekoppeld
+    if (!imageAfter || !sliderLine || !sliderButton) {
+      console.error('Een van de elementen ontbreekt in de slider-container:', sliderContainer);
+      return;
+    }
 
-    // Update "after" image clip en slider elementen
-    imageAfter.style.clipPath = `inset(0 ${100 - sliderValue}% 0 0)`;
-    sliderLine.style.left = percentage;
-    sliderButton.style.left = percentage;
-  });
-
-  // Laat het slepen van de slider-knop toe
-  let isDragging = false;
-
-  sliderButton.addEventListener('mousedown', () => {
-    isDragging = true;
-  });
-
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-      const sliderContainer = slider.closest('.slider-container');
-      const containerRect = sliderContainer.getBoundingClientRect();
-      const offsetX = e.clientX - containerRect.left;
-      const sliderValue = Math.min(Math.max((offsetX / containerRect.width) * 100, 0), 100);
-
-      slider.value = sliderValue;
+    // Update slider-positie op input
+    slider.addEventListener('input', (e) => {
+      const sliderValue = e.target.value;
       const percentage = `${sliderValue}%`;
 
-      // Update "after" image clip en slider elementen
+      // Pas de clip-path van de "after" afbeelding aan
       imageAfter.style.clipPath = `inset(0 ${100 - sliderValue}% 0 0)`;
+
+      // Update de positie van de lijn en de knop
       sliderLine.style.left = percentage;
       sliderButton.style.left = percentage;
-    }
+    });
+
+    // Functionaliteit voor slepen van de slider-knop
+    let isDragging = false;
+
+    sliderButton.addEventListener('mousedown', () => {
+      isDragging = true;
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        const containerRect = sliderContainer.getBoundingClientRect();
+        const offsetX = e.clientX - containerRect.left;
+        const sliderValue = Math.min(Math.max((offsetX / containerRect.width) * 100, 0), 100);
+
+        slider.value = sliderValue;
+        const percentage = `${sliderValue}%`;
+
+        // Update "after" afbeelding, lijn en knop
+        imageAfter.style.clipPath = `inset(0 ${100 - sliderValue}% 0 0)`;
+        sliderLine.style.left = percentage;
+        sliderButton.style.left = percentage;
+      }
+    });
   });
 });
