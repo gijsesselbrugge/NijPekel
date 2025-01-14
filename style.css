@@ -20,6 +20,7 @@ body {
 .centered-logo {
   max-width: 200px; /* Optioneel: Beperk de breedte van het logo */
   height: auto; /* Zorg dat de verhoudingen behouden blijven */
+  justify-content: center;
 }
 .landing-btn,
 .back-btn {
