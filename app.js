@@ -1,27 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const landingPage = document.getElementById("landing-page");
-  const variant1 = document.getElementById("variant1");
-  const variant2 = document.getElementById("variant2");
-  const variant1Btn = document.getElementById("variant1-btn");
-  const variant2Btn = document.getElementById("variant2-btn");
+document.querySelectorAll('.slider').forEach(slider => {
+  const imageAfter = slider.parentElement.querySelector('.image-after');
+  const sliderLine = slider.parentElement.querySelector('.slider-line');
+  const sliderButton = slider.parentElement.querySelector('.slider-button');
 
-  variant1Btn.addEventListener("click", () => {
-    landingPage.classList.add("hidden");
-    variant1.classList.remove("hidden");
-  });
+  slider.addEventListener('input', (event) => {
+    const value = event.target.value; // Haal de slider-waarde op (0-100)
+    const percentage = `${value}%`;
 
-  variant2Btn.addEventListener("click", () => {
-    landingPage.classList.add("hidden");
-    variant2.classList.remove("hidden");
-  });
+    // Pas de clip-path van de "after" afbeelding aan
+    imageAfter.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
 
-  // Slider logic
-  const sliders = document.querySelectorAll(".slider");
-  sliders.forEach((slider) => {
-    slider.addEventListener("input", (e) => {
-      const container = e.target.parentElement;
-      const imageAfter = container.querySelector(".image-after");
-      imageAfter.style.clipPath = `inset(0 ${100 - e.target.value}% 0 0)`;
-    });
+    // Beweeg de slider-lijn en knop
+    sliderLine.style.left = percentage;
+    sliderButton.style.left = percentage;
   });
 });
