@@ -22,7 +22,7 @@ body {
   justify-content: center; /* Horizontaal centreren */
   align-items: center; /* Verticaal centreren */
   height: 100vh; /* Zorgt ervoor dat de header de volledige hoogte van het scherm heeft */
-  background-color: #f0f0f0; /* Achtergrondkleur voor de header */
+  background-color:#ffffff; /* Achtergrondkleur voor de header */
 }
 .logo {
   max-width: 200px; /* Zorg ervoor dat het logo niet te groot wordt */
@@ -70,7 +70,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1200px; /* Stel hier een vaste breedte in */
+  width: 1400px; /* Stel hier een vaste breedte in */
   height: 800px; /* Stel hier een vaste hoogte in */
   background-color: #000; /* Optioneel: zwart als achtergrondkleur */
   border-radius: 10px;
