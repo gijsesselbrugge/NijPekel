@@ -19,7 +19,6 @@ body {
 }
 .logo {
   max-width: 200px; /* Zorg ervoor dat het logo niet te groot wordt */
-  height: auto; /* Verhoudingen behouden */
   align-items: center;
 }
 .landing-btn,
