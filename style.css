@@ -20,6 +20,7 @@ body {
 .logo {
   max-width: 200px; /* Zorg ervoor dat het logo niet te groot wordt */
   align-items: center;
+  height: auto; /* Verhoudingen behouden */
 }
 .landing-btn,
 .back-btn {
