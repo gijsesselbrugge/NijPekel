@@ -60,7 +60,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1200px; /* Stel hier een vaste breedte in */
+  width: 1500px; /* Stel hier een vaste breedte in */
   height: 600px; /* Stel hier een vaste hoogte in */
   background-color: #000; /* Optioneel: zwart als achtergrondkleur */
   border-radius: 10px;
