@@ -57,13 +57,15 @@ body {
 
 /* Slider Container */
 .slider-container {
-  position: relative;
-  max-width: 2000px !important;
-  height: 1200px !important;
-  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px; /* Stel hier een vaste breedte in */
+  height: 600px; /* Stel hier een vaste hoogte in */
+  background-color: #000; /* Optioneel: zwart als achtergrondkleur */
+  border-radius: 10px;
   overflow: hidden;
-  border-radius: 8px;
-  flex: none;
+  position: relative;
 }
 
 .image-container {
