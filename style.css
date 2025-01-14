@@ -60,8 +60,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px; /* Stel hier een vaste breedte in */
-  height: 600px; /* Stel hier een vaste hoogte in */
+  width: 1200px; /* Stel hier een vaste breedte in */
+  height: 800px; /* Stel hier een vaste hoogte in */
   background-color: #000; /* Optioneel: zwart als achtergrondkleur */
   border-radius: 10px;
   overflow: hidden;
