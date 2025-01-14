@@ -58,8 +58,8 @@ body {
 /* Slider Container */
 .slider-container {
   position: relative;
-  max-width: 1500px;
-  height: 800px;
+  max-width: 2000px;
+  height: 1200px;
   margin: 20px auto;
   overflow: hidden;
   border-radius: 8px;
