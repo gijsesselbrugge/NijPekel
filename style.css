@@ -63,6 +63,7 @@ body {
   margin: 20px auto;
   overflow: hidden;
   border-radius: 8px;
+  flex: none;
 }
 
 .image-container {
