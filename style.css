@@ -22,8 +22,8 @@ body {
   height: auto; /* Zorg dat de verhoudingen behouden blijven */
   position: absolute; /* Absolute positionering om het logo vrij te positioneren */
   top: 70%; /* Plaats het logo op 50% van de hoogte van het scherm */
-  left: 55%; /* Plaats het logo op 50% van de breedte van het scherm */
-  transform: translate(-70%, -55%); /* Verplaats het logo zodat het exacte midden wordt bereikt */
+  left: 52%; /* Plaats het logo op 50% van de breedte van het scherm */
+  transform: translate(-70%, -52%); /* Verplaats het logo zodat het exacte midden wordt bereikt */
 }
 .landing-btn,
 .back-btn {
